@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Web development</title>
+    <link rel="stylesheet" href="contact.css">
+    
+ </head>
+ <body>
+<header class="header">
+    <nav class="navbar">
+           <a href="#" class ="brand">Jay Tours</a>
+      <div>
+        <ul class="menu-items">
+          <li class="menu-item"><a href="firstPage.html">HOME</a></li>
+          <li class="menu-item"><a href="about.html">ABOUT</a></li>
+          <li class="menu-item"><a href="#services">SERVICES</a></li>
+          <li class="menu-item"></li><a href="#testimonials">TESTIMONIALS</a></li>
+          <li class="menu-item"><a href="#portfolio">PORTFOLIO</a></li>
+          <li class="menu-item"><a href="contact.html">CONTACTS</a></li>
+        </ul>
+      </div>
+  </nav>
+  </header>
+  <div class="container">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+        <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event){
+      event.preventDefault();
+      
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      
+      if(name && email && message){
+        // Here you can implement your own AJAX call to send the form data to your server
+        alert('Thank you for contacting us, ' + name + '. We will get back to you shortly.');
+      } else {
+        alert('Please fill out all the fields.');
+      }
+    });
+  </script>
+  <div class="footer">
+    <div class="column">
+      <h3>HELP</h3>
+      <ul>
+        <li>Help Center</li>
+        <li>FAQs</li>
+        <li>Terms of Use</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>About us</h3>
+      <ul>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+      </div>
+      <div class="column">
+        <h3>Destinations</h3>
+        <ul>
+          <li>Countries</li>
+          <li>Cities</li>
+        </ul>
+        </div>
+        <div class="column">
+          <h3>Partner with us</h3>
+          <ul>
+            <li>Properties</li>
+            <li>Affilates</li>
+          </ul>
+          </div>
+    <!-- Repeat for other columns -->
+    <div class="contact">
+      <p><strong>Phone:</strong> +94 112 875 965</p>
+      <p><strong>Address:</strong> N.056, Havelock Town, Colombo 05, Sri Lanka</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © 2020 - SLIIT WEB DEVELOPMENT - All rights reserved</p>
+  </div>
+</body>
+</html>
